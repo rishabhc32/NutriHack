@@ -11,7 +11,7 @@ This is how it will work:
 
 ![Architecture Image 1](images/arch1.jpg)
 
-### How it Works
+## How it Works
 * We capture the camera feed from device using `WebRTC`.
 * When user cliks capture button, the captured image frame is sent to `flask` server through `URL multipart form data` in `POST` request.
 * DL and Server magic:
@@ -19,3 +19,6 @@ This is how it will work:
   * After classification food's nutrient information is extracted using `edamam API`.
   * The response `JSON` is sent back to the user.
 * After receiving the response, nutrient info is displayed on user screen.
+
+## Architecture Diagram
+![Architecture Diagram 2](images/arch2.jpg)
