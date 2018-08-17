@@ -25,22 +25,34 @@ document.getElementById("startButton").addEventListener("click", MakeImage);
 
 function MakeImage(){
 
-    let canvas = document.createElement('canvas');
-    let ctx = canvas.getContext('2d');
-    canvas.width = 200;
-      canvas.height = 200;
-      console.log(canvas.width)
+	let canvas = document.createElement('canvas');
+	let ctx = canvas.getContext('2d');
+	canvas.width = document.querySelector('video').width+21
+  	canvas.height = document.querySelector('video').height-40;
+  	console.log(canvas.width)
 
-      ctx.drawImage(localVideo, 0, 0, canvas.width, canvas.height);
+  	ctx.drawImage(localVideo, 0, 0, canvas.width, canvas.height);
 
-      document.getElementById("video_canvas").appendChild(canvas);
-      console.log(document.getElementById("video_canvas"));
-      document.getElementById("video_canvas").remove(document.getElementById("video_canvas").childNodes[0]);
+  	document.getElementById("video_canvas").appendChild(canvas);
+  	console.log(document.getElementById("video_canvas"));
+  	document.getElementById("video_canvas").removeChild(document.querySelector('video'));
+
+  	canvas.toBlob(makeBlob, 'image/jpeg', .9);
 
 
 }
 
 function makeBlob(blob){
 
-    gotLocalMediaStream(blob);
+	var formdata = new Formdata();
+
+	formdata.append('Nutrient_Info',blob);
+
+	fetch('https://example.com/profile/avatar', {
+		method: 'POST',
+		body: formdata
+	})
+	.then(response => response.json())
+	.catch(error => console.log('Error: ', error))
+	.then(response => console.log('Success: ', response))
 }
