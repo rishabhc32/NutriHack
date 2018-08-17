@@ -46,7 +46,7 @@ function makeBlob(blob){
 
 	var formdata = new Formdata();
 
-	formdata.append('Nutrient_Info',blob);
+	formdata.append('nutrient_info',blob);
 
 	fetch('https://example.com/profile/avatar', {
 		method: 'POST',
