@@ -48,7 +48,7 @@ function makeBlob(blob){
 
 	formdata.append('nutrient_info',blob);
 
-	fetch('https://example.com/profile/avatar', {
+	fetch('http://127.0.0.1:5000/nutrihack_api', {
 		method: 'POST',
 		body: formdata
 	})
