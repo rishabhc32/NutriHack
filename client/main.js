@@ -46,16 +46,19 @@ function MakeImage(){
 function makeBlob(blob){
 
     var formdata = new FormData();
-    console.log(blob)
+    //console.log(blob)
 
 	formdata.append('nutrient_info',blob);
 
 	fetch('http://127.0.0.1:5000/nutrihack_api', {
         method: 'POST',
-        mode: 'no-cors',
+        //mode: 'no-cors',
 		body: formdata
-	})
-	.then(response => response.json())
-	.catch(error => console.log('Error: ', error))
-	.then(response => console.log('Success: ', response))
+    })
+    .then((response) => {
+        console.log(response)
+    })
+    .catch((err) => {
+        console.log('ERROR')
+    })
 }
