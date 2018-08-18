@@ -25,6 +25,7 @@ document.getElementById("startButton").addEventListener("click", MakeImage);
 
 function MakeImage(){
 
+	document.getElementById("startButton").onclick = null;
 	let canvas = document.createElement('canvas');
 	let ctx = canvas.getContext('2d');
 	canvas.width = document.querySelector('video').width+21
