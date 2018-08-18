@@ -22,3 +22,13 @@ This is how it will work:
 
 ## Architecture Diagram
 ![Architecture Diagram 2](images/arch2.jpg)
+
+## Directory Structure
+* `client` -- Client side logic
+  * `index.html` -- Client/User side `html`
+  * `main.js`, `main.css` -- Client/User side `JavaScript` and `CSS`
+* `server` -- `Flask` server classifying images and retunring their nutrition value
+  * `server.py` -- Implementing `flask` server logic
+* `keras_classifier.py` -- CNN implemented in `Keras` for classification
+* `dataset_to_csv` -- Converting test/train dataset images to CSV
+* `images` -- Readme images
