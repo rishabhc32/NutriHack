@@ -34,5 +34,11 @@ __This is how it will work:__
   * The response `JSON` is sent back to the user.
 * After receiving the response, nutrient info is displayed on user screen.
 
+## Screenshots
+![Screenshot 1](images/screen1.png)
+![Screenshot 1](images/screen2.png)
+![Screenshot 1](images/screen3.png)
+![Screenshot 1](images/screen4.png)
+
 ## Architecture Diagram
 ![Architecture Diagram 2](images/arch2.jpg)
