@@ -21,6 +21,7 @@ __This is how it will work:__
   * `main.js`, `main.css` -- Client/User side `JavaScript` and `CSS`
 * `server` -- `Flask` server classifying images and retunring their nutrition value
   * `server.py` -- Implementing `flask` server logic
+  * `model_weights.h5` and `model.json` -- Pretrained model weights
 * `keras_classifier.py` -- CNN implemented in `Keras` for classification
 * `dataset_to_csv` -- Converting test/train dataset images to CSV
 * `images` -- Readme images
